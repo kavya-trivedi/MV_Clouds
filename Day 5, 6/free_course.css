@@ -1,0 +1,106 @@
+/* Universal Styles */
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+}
+
+/* Section */
+.section {
+    background-color: #DAE1ED;
+    margin-top: 70px;
+    display: flex;
+    height: 110px;
+    text-align: center;
+}
+.section p {
+    margin-top: 40px;
+    font-weight: 100;
+    margin-left: 30px;
+}
+.section #arrow {
+    transform: rotateZ(180deg);
+    color: black;
+    padding: 0px 0px 0px 5px;
+    height: fit-content;
+    width: fit-content;
+}
+
+
+/* Free Courses */
+.free-courses {
+    display: flex;
+    width: 100%;
+}
+.free-courses .filter {
+    width: 25%;
+    padding: 20px 0px 0px 70px;
+    font-weight: 300;
+}
+.free-courses .filter h3 {
+}
+.free-courses .results-container {
+    width: 65%;
+    padding: 20px 0px 0px 70px;
+    font-weight: 300;
+}
+
+
+/* Results */
+.results {
+    background-color: #F0F6FF;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 0px;
+    padding: 50px 0px 50px 0px;
+    border-radius: 20px;
+}
+
+.results .card {
+    background-color: white;
+    border: 1px solid #E9EAF2;
+    transition: 0.3s;
+    width: 32%;
+    margin-bottom: 20px;
+    border-radius: 15px;
+}
+
+.results .card img {
+    border-radius: 10px 10px 10px 10px;
+    max-width: 95%;
+    margin: 7px;
+}
+
+.results .card:hover {
+    box-shadow: 0 8px 16px 0 #E9EAF2;
+    width: 32.5%;
+}
+
+.results .card .container {
+    padding: 2px 16px;
+}
+
+.results .card .container p {
+    color: #666;
+    font-size: small;
+}
+
+.results .card .container p b {
+    margin-left: 5px;
+    color: black;
+    font-size: medium;
+}
+
+.results .card .container p i {
+    font-size: medium;
+    color: #F2D049;
+}
+
+.results .card .container h4 {
+    font-weight: 600;
+}

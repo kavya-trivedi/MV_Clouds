@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#">
+        <label for="username">Username: </label>
+        <input type="text" id="username"><br><br>
+        <label for="pwd">Password: </label>
+        <input type="password" id="pwd"><br><br>
+        <label for="gender">Gender: </label>
+        <input type="radio" id="male" value="male" name="gender">
+        <label for="male">Male </label>
+        <input type="radio" id="female" value="female" name="gender">
+        <label for="female">Female </label><br><br>
+        <label for="dropdown">Dropdown Menu: </label>
+        <select name="dropdown" id="dropdown">
+            <option value="" disabled selected> </option>
+            <option value="employed">Employed</option>
+            <option value="unemployed">Unemployed</option>
+        </select><br><br>
+        <input type="submit" id="submit">
+    </form>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
+        import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-database.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+          apiKey: "AIzaSyCHSdg6q0xOitj4UwcoWcHE0wvQ801IbNc",
+          authDomain: "userdetails-99e16.firebaseapp.com",
+          projectId: "userdetails-99e16",
+          storageBucket: "userdetails-99e16.firebasestorage.app",
+          messagingSenderId: "1065543571617",
+          appId: "1:1065543571617:web:f8fd3c0f07546e1d6878e0"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+
+        // get ref to database services
+        const db = getDatabase(app)
+        document.getElementById("submit").addEventListener('click', function(e) {
+            e.preventDefault()
+            set(ref(db, 'user/' + document.getElementById("username").value), {
+                username: document.getElementById("username").value.trim(),
+                gender: document.querySelector('input[name="gender"]:checked')?.value,
+                employment: document.getElementById("dropdown").value,
+            })
+            alert("Login Successful!")
+        })
+      </script>
+</body>
+</html>

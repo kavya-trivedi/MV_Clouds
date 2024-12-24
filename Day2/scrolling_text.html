@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main-container {
+            position: relative;
+        }
+        img {
+            width: 100%;
+            height: 100vh;
+            position: relative;
+        }
+        .scrolling-text-container {
+            background-color: gold;
+            position: absolute;
+            bottom: 150px;
+            height: 50px;
+            left: 340px;
+            right: 95px;
+            overflow: hidden;
+        }
+        .scrolling-text {
+            display: flex;
+            animation: scroll 15s infinite linear;
+            white-space: nowrap;
+            top: 25%;
+            position: relative;
+        }
+        @keyframes scroll {
+            from {
+                transform: translateX(100%);
+            }
+            to {
+                transform: translateX(-100%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <img src="TV9.png" alt="" />
+        <div class="scrolling-text-container">
+            <div class="scrolling-text">Breaking News: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore nam velit consequatur dolores tempora dignissimos quam quod quis cumque, a repellendus maiores debitis nihil totam nostrum expedita? Sunt ipsa, molestiae earum omnis facere nihil? Tempore molestiae dolorem ipsam soluta itaque voluptas optio. Debitis modi reprehenderit neque nihil itaque consequatur nulla?</div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News</title>
+
+    <style>
+
+        img {
+            width: 100%;
+            height: 90vh;
+        }
+        
+        .news-container {
+            position: fixed;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            width: 100%;
+            height: 5vh;
+            display: flex;
+            list-style: none;
+            margin: 0;
+            background-color: palegoldenrod;
+        }
+        
+        .text{
+            position: relative;
+            top: 15%;
+            animation: scroll 25s infinite linear;
+        }
+
+        @keyframes scroll {
+            from {
+                transform: translateX(100%);
+            }
+        
+            to {
+                transform: translateX(-100%);
+        
+            }
+        }
+    </style>
+</head>
+
+<body>
+        <img src="news-page-1.png" alt="news">
+        <div class="news-container">
+            <div class="text">
+                Sensex falls over 800 points: 3 key factors for the market crash today.
+                World Test Championship final scenarios after New Zealand beat England.    
+            </div>
+        </div>
+</body>
+
+</html> -->

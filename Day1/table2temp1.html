@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .item1 { grid-area: auto; }
+        .item2 { grid-area: auto; }
+        .item3 { grid-area: auto; }
+        .item4 { grid-area: auto; }
+        .item5 { grid-area: auto; }
+
+        .grid-container {
+            border: 1px solid rgba(0, 0, 0, 0.8);
+            display: grid;
+            /* grid-template-columns: auto auto auto auto;
+            grid-template-rows: auto auto auto auto; */
+            grid-template-areas:
+                'item1 item2 item3 item3'
+                'item1 item2 item3 item3'
+                'item4 item4 item5 item5'
+                'item4 item4 item6 item6';
+        }
+
+        .grid-item {
+            border: 1px solid rgba(0, 0, 0, 0.8);
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="item1">1</div>
+        <div class="item2">1</div>
+        <div class="item3">1</div>  
+        <div class="item4">1</div>
+        <div class="item5">1</div>
+        <div class="item6">1</div>
+      </div>
+</body>
+</html>

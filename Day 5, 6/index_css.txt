@@ -1,0 +1,137 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    margin-left: 0%;
+    margin-top: 0%;
+}
+.header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 10%;
+    background-color: white;
+    box-shadow: 1px 1px 2px 1px rgb(179, 178, 178);
+    z-index: 2;
+}
+.header h3 {
+    font-weight: bold;
+    font-size: xx-large;
+    color: #0056d2;
+}
+.header .explore-btn-group {
+    position: relative;
+    display: inline-block;
+}
+.header .explore-btn-group .explore-btn {
+    border: 1px solid #0056d2;
+    border-radius: 5px;
+    background-color: white;
+    color: #0056d2;
+    font-weight: 600;
+    height: 40px;
+    width: 120px;
+}
+.header .explore-btn-group .explore-btn:hover {
+    background-color: #F2F5FA;
+}
+.header .explore-btn-group .dropdown-content {
+    background-color: #F2F5FA;
+    display: none;
+    position: absolute;
+    top: 315%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 260px;
+    z-index: 2;
+}
+.header .explore-btn-group .dropdown-content h6 {
+    color: black;
+    font-size: large;
+    padding: 0% 5%;
+    font-weight: 600;
+}
+.header .explore-btn-group .dropdown-content a {
+    color: black;
+    padding: 5% 5%;
+    text-decoration: none;
+    display: block;
+}
+.header .explore-btn-group .dropdown-content a:hover {background-color: #ddd;}
+.header .explore-btn-group:hover .dropdown-content {display: block;}
+.header #search-bar {
+    width: 30%;
+}
+.header #search-bar .form-control {
+    width: 100%;
+    border: 1px solid rgb(203, 202, 202);
+    border-radius: 50px;
+    padding: 15px 15px;
+    font-weight: 100;
+}
+.header #search-button {
+    background-color: #0056D2;
+    color: #F2F5FA;
+    border: none;
+    border-radius: 50px;
+    height: 40px;
+    width: 40px;
+}
+.header a {
+    text-decoration: none;
+    color: black;
+    font-size: large;
+    font-weight: 100;
+    padding-top: 0.5%;
+}
+.header a:hover {
+    color: #0048B0;
+}
+.coursera-plus {
+    background-color: #F0F6FF;
+    display: flex;
+    position: absolute;
+    justify-content: space-around;
+}
+.coursera-plus img {
+    margin-top: 17vh;
+    height: 50vh;
+    /* float: right; */
+}
+.coursera-plus .text {
+    padding-top: 5%;
+    padding-left: 3%;
+    width: 40%;
+}
+.coursera-plus .text h3 {
+    font-weight: 900;
+    font-size: xx-large;
+    color: #0056d2;
+}
+.coursera-plus .text h1 {
+    font-weight: 600;
+}
+.coursera-plus .text p {
+    font-weight: 100;
+}
+.coursera-plus .text button {
+    background-color: #0048B0;
+    border: none;
+    border-radius: 4px;
+    height: 50px;
+    width: 200px;
+    padding: 1% 2%;
+    color: #F2F5FA;
+    font-weight: 600;
+    margin-top: 2%;
+}
+.coursera-plus .text h5 {
+    color: #0048B0;
+    margin-top: 3%;
+    font-weight: bold;
+}
+@media only screen and (max-width: 768px) {
+    /*  */
+}

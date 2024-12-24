@@ -1,0 +1,422 @@
+/* Universal Styles */
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    /* background-size: cover;
+    justify-self: center; */
+}
+
+/* Coursera Plus Section */
+.coursera-plus {
+    background-color: #F0F6FF;
+    display: flex;
+    /* flex-wrap: ; */
+    justify-content: space-around;
+    margin-top: 10vh;
+    /* width: 100vw; */
+}
+.coursera-plus img {
+    margin-top: 50px;
+    height: 50vh;
+    order: 2;
+}
+.coursera-plus .text {
+    max-width: 500px;
+    order: 1;
+    padding: 20px 20px 0px 0px;
+}
+.coursera-plus .text h3 {
+    font-weight: 900;
+    font-size: 1.5rem;
+    color: #0056d2;
+}
+.coursera-plus .text h1 {
+    font-weight: 600;
+    font-size: 1.8rem;
+}
+.coursera-plus .text p {
+    font-weight: 400;
+    font-size: 1rem;
+}
+.blue-button {
+    background-color: #0056d2;
+    border: none;
+    border-radius: 4px;
+    height: 50px;
+    width: 100%;
+    max-width: 200px;
+    color: #F2F5FA;
+    font-weight: 600;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.blue-button:hover {
+    background-color: #0048B0;
+}
+.coursera-plus .text h5 {
+    color: #0048B0;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .coursera-plus {
+        flex-direction: column;
+        align-items: center;
+    }
+    .coursera-plus .text {
+        text-align: center;
+        /* padding: 10px; */
+    }
+}
+
+@media (max-width: 768px) {
+    .coursera-plus .text h1 {
+        font-size: 1.5rem;
+    }
+    .coursera-plus .text p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .coursera-plus .text h1 {
+        font-size: 1.2rem;
+    }
+    .coursera-plus .text p {
+        font-size: 0.8rem;
+    }
+}
+
+
+/* Invest in your career */
+.invest {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: white;
+    color: #333;
+}
+
+.invest h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.invest .group {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.invest .group div {
+    max-width: 300px;
+    text-align: center;
+    padding: 20px;
+}
+
+.invest .group div i {
+    font-size: 2rem;
+    color: #3d52a0;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.invest .group div h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.invest .group div p {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+
+/* Career skills that work */
+
+.skills {
+    background-color: #F0F6FF;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 40px;
+    padding: 50px 0px 50px 0px;
+    border-radius: 20px;
+}
+
+.skills .card {
+    background-color: white;
+    border: 1px solid #E9EAF2;
+    transition: 0.3s;
+    width: 20%;
+    border-radius: 15px;
+}
+
+.skills .card img {
+    border-radius: 10px 10px 10px 10px;
+    max-width: 95%;
+    margin: 7px;
+}
+
+.skills .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    width: 20.5%;
+}
+
+.skills .card .container {
+    padding: 2px 16px;
+}
+
+.skills .card .container p {
+    color: #666;
+    font-size: small;
+}
+
+.skills .card .container h4 {
+    font-weight: 600;
+}
+
+.white-button {
+    background-color: white;
+    /* width: 160px; */
+    padding: 0px 25px 0px 25px;
+    height: 40px;
+    border: 1px solid #0056D2;
+    border-radius: 5px;
+    color: #0056D2;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.white-button:hover {
+    background-color: #F0F6FF;
+}
+
+/* What subscribers are achieving through learning */
+.testimonial-container {
+    padding: 5%;
+}
+
+.testimonial-container h2 {
+    padding: 0px 0px 10px 37px;
+}
+
+.testimonials {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.testimonials .container {
+    border: 2px solid #E9EAF2;
+    background-color: white;
+    border-radius: 10px;
+    padding: 16px;
+    margin: 16px 0;
+    width: 27%;
+}
+
+.testimonials .container .person {
+    display: flex;
+}
+
+.testimonials .container .person span {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    font-weight: 600;
+    font-size: medium;
+}
+
+.testimonials .container img {
+    float: left;
+    margin-right: 20px;
+    border-radius: 50%;
+}
+
+.testimonials .container p {
+    font-weight: lighter;
+    color: #666;
+    font-size: medium;
+}
+
+@media (max-width: 500px) {
+    .testimonials .container {
+        text-align: center;
+    }
+    .testimonials .container img {
+        margin: auto;
+        float: none;
+        display: block;
+    }
+}
+
+
+/* Plans for you or your team */
+.plans-container {
+    background-color: #F0F6FF;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+
+.plans {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.plans .container {
+    margin-top: 50px;
+    background-color: white;
+    max-width: 270px;
+    text-align: center;
+    padding: 20px;
+    height: max-content;
+}
+
+.plans .container h3 {
+    font-weight: 800;
+}
+
+.plans .container h4 {
+    font-weight: 700;
+    font-size: small;
+    padding: 15px 0px 15px 0px;
+}
+
+.plans .container h4 span {
+    font-size: xx-large;
+}
+
+.plans .container p {
+    color: #666;
+    font-size: medium;
+}
+
+.plans .container .points {
+    display: flex;
+    text-align: left;
+    align-items: center;
+    gap: 20px;
+}
+
+.plans .container .points i {
+    color: #0056D2;
+}
+
+hr {
+    border-top: 1px solid #F3F6FA;
+}
+
+.plans #most-popular {
+    margin-top: 30px;
+    border: 3px solid #0056D2;
+    border-top: 20px solid #0056D2;
+}
+
+.plans .container .most-popular {
+    margin-top: -15%;
+    color: white;
+    font-size: small;
+    padding-top: 2px;
+}
+
+
+/* Frequently asked questions */
+.faq {
+    margin: 50px 40px 50px 40px;
+}
+
+.faq h2 {
+    margin: 40px;
+}
+
+.faq .container {
+    border: 2px solid #E9EAF2;
+    border-radius: 10px;
+    margin: 40px;
+    padding: 50px 40px 50px 40px;
+}
+
+.faq .container .accordion {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: medium;
+    font-weight: 600;
+    transition: 0.4s;
+}
+
+.active, .faq .container .accordion:hover {
+    background-color: #F0F6FF;
+    border: 1px solid #0056d2;
+    border-radius: 5px;
+}
+
+.faq .container .accordion::before {
+    content: '\3031';
+    transform: rotate(180deg);
+    /* content: '\3009'; */
+    color: black;
+    font-weight: bold;
+    float: left;
+    margin-left: 0px;
+    padding-left: 10px;
+}
+
+.faq .container .active:after {
+    /* content: "\3031"; */
+    /* transform: rotate(0.25turn); */
+    /* border: 1px solid #0056D2; */
+}
+
+.faq .container .panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.faq .container .panel p {
+    font-weight: lighter;
+    color: #333;
+    font-size: medium;
+    padding: 0px 20px 0px 20px;
+}
+
+
+/* Coursera Plus 2 */
+.coursera-plus-2 {
+    background-color: #0056D2;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.coursera-plus-2 h1 {
+    font-weight: 800;
+    font-size: 50px;
+}
+
+.coursera-plus-2 h4 {
+    font-weight: 500;
+    padding-bottom: 20px;
+}
