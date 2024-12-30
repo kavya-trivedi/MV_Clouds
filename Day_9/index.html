@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="redCircle" class="circle droppable"></div>
+    <div id="blueCircle" class="circle draggable"></div>
+    <script>
+        const redCircle = document.getElementById('redCircle');
+        const blueCircle = document.getElementById('blueCircle');
+
+        redCircle.addEventListener('drop', drop);
+        redCircle.addEventListener('dragover', allowDrop);
+        blueCircle.addEventListener('dragstart', drag)
+
+        function allowDrop(e) {
+            e.preventDefault();
+        }
+
+        function drag(e) {
+            const data = e.dataTransfer.setData("text/plain", e.target.id);
+            console.log('my data on drag ', data);
+
+        }
+
+        function drop(e) {
+        
+            const redCircle = document.getElementById(e.target.id);
+            console.log('redCircle ',redCircle);
+
+            e.preventDefault();
+            const data = e.dataTransfer.getData('text/plain');
+            console.log('MY data in drop =', data);
+            const droppedElement = document.getElementById(data);
+        
+            if (droppedElement) {
+                debugger
+                const parentCircle = redCircle;
+            
+                console.log('parentCircle ',parentCircle);
+
+            
+                parentCircle.style.display = "flex";
+                parentCircle.style.alignItems = "center";
+                parentCircle.style.justifyContents = "center";
+            
+                droppedElement.style.position = "relative";
+                droppedElement.draggable = false;
+                droppedElement.style.height = `${parentCircle.offsetHeight - 10}px`;
+                droppedElement.style.width = `${parentCircle.offsetWidth - 10}px`;
+                droppedElement.style.top = "-10px";
+            
+                parentCircle.appendChild(droppedElement);
+            
+                const newCircle = document.createElement("div");
+                newCircle.classList.add("circle", "draggable");
+                newCircle.style.backgroundColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+                newCircle.id = `circle-${Date.now()}`;
+                console.log('newcir id ',newCircle.id);
+                newCircle.style.left = "5px";
+                newCircle.draggable = true;
+            
+                newCircle.addEventListener('dragover', allowDrop);
+                newCircle.addEventListener('dragstart', drag)
+            
+                document.body.appendChild(newCircle);
+            }
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+#redCircle {
+    background-color: red;
+}
+
+#blueCircle {
+    background-color: blue;
+}
+
+.droppable {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.draggable {
+    margin-top: 20px;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    cursor: grab;
+}
